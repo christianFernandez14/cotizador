@@ -1,14 +1,26 @@
 import useCotizador from "../hooks/useCotizador"
+import {MARCAS, PLANES} from '../constants/index'
 
 const Resultado = () => {
 
-  const { resultado } = useCotizador()
+  const { resultado, datos } = useCotizador()
+  const {marca, plan, year} = datos
+
+  const [nombreMarca] = MARCAS.filter(m => m.id === Number(marca))
+
+  // console.log(nombreMarca)
 
   if (resultado === 0) return null;
-  
+
   return (
-    <div>
-      <p>Resultado: {resultado}</p>
+    <div className="bg-gray-100 text-center mt-5 p-5 shadow">
+      <h2 className="text-gray-600 font-black text-3xl">
+        Resumen
+      </h2>
+      <p className="my-2 ">
+        <span className="font-bold">Marca: {nombreMarca.nombre}</span>
+      </p>
+      
     </div>
   )
 }
