@@ -27,7 +27,9 @@ Lo que vamos a ver:
     => Existe dos Export
         => El nombrado (donde exportamos a CotizadorProvider), nos sirve para decirle a nuestra app, que hay algo disponible
            y cualquier componente puede acceder a este.
-        => El default (donde exportamos a CotizadorContext), 
+        => El default (donde exportamos a CotizadorContext), es el medio para decirle a mi aplicacion sobre el uso de un context
+           y sera el parametro del hook "useContext", ya que puedes tener multiples Context a tu aplicacción y por lo tanto debes
+           especificar con el useContext, a que Context haces referencia.
    
    Y este es su estructura basica
 
