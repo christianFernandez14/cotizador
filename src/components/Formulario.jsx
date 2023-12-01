@@ -5,9 +5,15 @@ import Error from "./Error";
 
 const Formulario = () => {
 
-  const { datos, handleChangedatos, error, setError } = useCotizador();
+  const {
+    datos,
+    handleChangedatos,
+    error,
+    setError,
+    cotizarSeguro
+  } = useCotizador();
 
-  
+
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -93,6 +99,7 @@ const Formulario = () => {
         </div>
 
         <input
+          onClick={() => cotizarSeguro()}
           type="submit"
           value="Cotizar"
           className="w-full bg-indigo-500 hover:bg-indigo-600 transition-colors text-white cursor-pointer p-3 uppercase font-bold"
