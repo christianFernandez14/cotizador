@@ -16,3 +16,37 @@ Lo que vamos a ver:
       => Se combina con el hook "useContext", es el que simplifica el acceso a los datos
       => Povaider, actulizas el state desde un componente hijo
       => A traves de Context, puedes crear librerias para React
+
+=> ALGO DE TEORIA (Provider)
+
+    => El Provider va en una carpeta externa (context)
+    => Dentro del archivo del Provider con extension.jsx, importamos de "React" el createContext, como su nombre lo dice
+       y es muy intuitivo, sirve para crear un Context
+    => Definir bien nombre del Context y del Provider
+    => El Provider tendra los state, effect y funciones, practicamente es de donde vienen los datos 
+    => Existe dos Export
+        => El nombrado (donde exportamos a CotizadorProvider), nos sirve para decirle a nuestra app, que hay algo disponible
+           y cualquier componente puede acceder a este.
+        => El default (donde exportamos a CotizadorContext), 
+   
+   Y este es su estructura basica
+
+              import { createContext } from "react";
+
+              const CotizadorContext = createContext();
+
+              const CotizadorProvider = ({ children }) => {
+
+                return (
+                  <CotizadorContext.Provider>
+                    {children}
+                  </CotizadorContext.Provider>
+                )
+              }
+
+              export{
+                CotizadorProvider
+              }
+
+              export default CotizadorContext
+
