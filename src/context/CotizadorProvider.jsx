@@ -1,20 +1,22 @@
-import { createContext } from "react";
+import { useState, createContext } from "react";
 
 const CotizadorContext = createContext();
 
 const CotizadorProvider = ({ children }) => {
 
-  const hola = 'Hola desde una constante'
+  const [modal, setModal] = useState(false)
 
-  const fnHola = () => {
-    console.log('Hola desde una funcion')
+  // Creamos una funcion intermedia, para no pasar la funcion moficiadora
+  const cambiarState = () => {
+    setModal(!modal)
   }
-
+  
   return (
     <CotizadorContext.Provider
       value={{
-        hola,
-        fnHola
+        modal,
+        cambiarState
+
       }}
     >
       {children}
