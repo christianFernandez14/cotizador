@@ -1,8 +1,18 @@
-# React + Vite
+PRYECTO COTIZADOR DE SEGUROS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lo que vamos a ver:
 
-Currently, two official plugins are available:
+1.- Contex Api
+2.- useContex
+3.- Dandole estilos (CSS) con focus Tailwind
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=> ALGO DE TEORIA
+
+    Que es ContextApi: Es tener un estado global sin dependencias (esta incluido en React), es decir sin Redux o Mobx
+
+      => Esta disponible de la V16.3 (Esta más consolidad que los hooks, ya que estos aperecieron el V16.8)
+      => Puede pasar state o funciones hasta los hijos que lo requieran, sin que los que esten de por medio lo tenga
+      => Se define un archivo principal, y este lo vera cualquier componente que lo requiera
+      => Se combina con el hook "useContext", es el que simplifica el acceso a los datos
+      => Povaider, actulizas el state desde un componente hijo
+      => A traves de Context, puedes crear librerias para React
