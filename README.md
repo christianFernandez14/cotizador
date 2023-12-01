@@ -52,3 +52,9 @@ Lo que vamos a ver:
 
               export default CotizadorContext
 
+=> ALGO DE TEORIA (useCallbach y useMemo):
+
+      Son hooks, que NO vam ser utilizados en el mismo componente, pero cumple una misma función
+
+      => Evitar el Re-renerizado del state, si dependes de algun resultado para mostrar, 
+
